@@ -33,6 +33,11 @@ filetype plugin indent on
 :autocmd Filetype ruby set sw=2
 :autocmd Filetype ruby set ts=2
 
+" Indentation for JavaScript
+:autocmd Filetype javascript set sts=2
+:autocmd Filetype javascript set sw=2
+:autocmd Filetype javascript set ts=2
+
 " Airline
 let g:airline_powerline_fonts = 1
 
