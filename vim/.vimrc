@@ -22,6 +22,7 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
+Plugin 'mattn/emmet-vim'
 
 " Vundle Ends
 call vundle#end()
@@ -44,3 +45,6 @@ nnoremap <C-f> :FZF<CR>
 
 " Colorscheme
 colorscheme onedark
+
+" Emmet
+let g:user_emmet_leader_key=','
