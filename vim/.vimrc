@@ -42,7 +42,8 @@ filetype plugin indent on
 let g:airline_powerline_fonts = 1
 
 " NERDTree
-nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap - :NERDTreeToggle<CR>
+map ] :NERDTreeFind<CR>
 
 " FZF
 set rtp+=~/.fzf
