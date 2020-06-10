@@ -48,3 +48,6 @@ colorscheme onedark
 
 " Emmet
 let g:user_emmet_leader_key=','
+
+" Custom maps
+nmap <C-g> :w<cr>
