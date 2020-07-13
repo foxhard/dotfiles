@@ -1,11 +1,12 @@
 set nocompatible    " Disable vi compatibility
 set number          " Show line number
-set hls             " Highlight Search
 syntax enable       " Turn on syntax highlighting
 set ts=4            " tabstop - Tab size
 set sw=4            " shiftwidth - Indentation size
 set sts=4           " softtabstop - Tabs/Spaces interop
 set expandtab       " Expands tab to spaces
+set incsearch       " Inclusive search (highlighting when typing)
+set nohlsearch      " Do not highlight word after press enter
 
 " Vundle Init
 filetype off
@@ -94,3 +95,5 @@ let g:ale_fixers = {
 nmap <C-g> :w<cr>
 " --- Run rspec current file
 nmap <Leader>r :!clear && rspec %<cr>
+" --- Toggle search highlights
+nnoremap <c-h> :set hlsearch!<cr>
