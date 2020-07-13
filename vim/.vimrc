@@ -90,4 +90,7 @@ let g:ale_fixers = {
 \}
 
 " Custom maps
+" --- Save current file
 nmap <C-g> :w<cr>
+" --- Run rspec current file
+nmap <Leader>r :!clear && rspec %<cr>
