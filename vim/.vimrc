@@ -24,6 +24,7 @@ Plugin 'sheerun/vim-polyglot'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'mattn/emmet-vim'
+Plugin 'preservim/nerdcommenter'
 
 " Vundle Ends
 call vundle#end()
