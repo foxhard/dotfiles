@@ -94,8 +94,10 @@ let g:ale_fixers = {
 " Custom maps
 " --- Save current file
 nmap <C-g> :w<cr>
-" --- Run rspec current file
+" --- Run rspec on current file
 nmap <Leader>r :!clear && rspec %<cr>
+" --- Run jest on current file
+nmap <Leader>j :!clear && npx jest %<cr>
 " --- Toggle search highlights
 nnoremap <c-h> :set hlsearch!<cr>
 " --- Use <tab> for trigger completion and navigate to the next complete item
