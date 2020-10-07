@@ -107,3 +107,6 @@ function! s:check_back_space() abort
 endfunction
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" CTags
+set tags=.git/tags,./tags;
