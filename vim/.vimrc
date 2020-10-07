@@ -26,6 +26,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'mattn/emmet-vim'
 Plugin 'preservim/nerdcommenter'
+Plugin 'neoclide/coc.nvim'
 
 " Vundle Ends
 call vundle#end()
@@ -97,3 +98,10 @@ nmap <C-g> :w<cr>
 nmap <Leader>r :!clear && rspec %<cr>
 " --- Toggle search highlights
 nnoremap <c-h> :set hlsearch!<cr>
+" --- Use <tab> for trigger completion and navigate to the next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
