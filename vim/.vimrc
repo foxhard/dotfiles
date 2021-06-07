@@ -27,6 +27,13 @@ Plugin 'tpope/vim-rails'
 Plugin 'mattn/emmet-vim'
 Plugin 'preservim/nerdcommenter'
 Plugin 'neoclide/coc.nvim'
+Plugin 'ecomba/vim-ruby-refactoring'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'gregsexton/MatchTag'
+Plugin 'ap/vim-css-color'
+Plugin 'stephenway/postcss.vim'
+Plugin 'uguu-org/vim-matrix-screensaver'
 
 " Vundle Ends
 call vundle#end()
@@ -62,6 +69,7 @@ let g:user_emmet_leader_key=','
 " ALE
 " --- Set specific linters
 let g:ale_linters = {
+\   'css': ['stylelint'],
 \   'javascript': ['eslint'],
 \   'ruby': ['rubocop'],
 \}
@@ -91,6 +99,12 @@ let g:ale_fixers = {
   \    'ruby': ['rubocop'],
 \}
 
+" CTags
+set tags=.git/tags,./tags;
+
+" Use ack instead of grep
+set grepprg=ack
+
 " Custom maps
 " --- Save current file
 nmap <C-g> :w<cr>
@@ -108,5 +122,16 @@ endfunction
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" CTags
-set tags=.git/tags,./tags;
+" --- Remove all Ruby comments of current file
+nmap <Leader>x :g/#/d<cr>
+
+" --- Spanish letters
+imap <unique> <C-n> ñ
+imap <unique> <C-a> á
+imap <unique> <C-e> é
+imap <unique> <C-k> í
+imap <unique> <C-o> ó
+imap <unique> <C-u> ú
+
+" --- Config for scss files
+autocmd FileType scss setl iskeyword+=@-@
