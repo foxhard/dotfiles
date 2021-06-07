@@ -1,11 +1,7 @@
 --database=postgresql
 --skip-keeps
---skip-action-mailer
---skip-action-mailbox
---skip-action-text
---skip-active-storage
---skip-puma
---skip-action-cable
 --skip-test
 --skip-bundle
---skip-webpack-install
+--skip-jbuilder
+--skip-turbolinks
+--skip-sprockets
