@@ -6,6 +6,7 @@ This is the current stuff, _May the Force be with you_
 | --- | --- |
 | `vim` | .vimrc file and other files |
 | `rails` | .railsrc file |
+| `zsh` | .zshrc file |
 
 
 ## How to install
