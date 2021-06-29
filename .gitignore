@@ -3,3 +3,4 @@
 *~
 .netrwhist
 vim/.vim/bundle/
+coc/.config/coc/extensions/node_modules/

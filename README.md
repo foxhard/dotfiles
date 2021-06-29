@@ -5,6 +5,7 @@ This is the current stuff, _May the Force be with you_
 |:fire:|:fire:|
 | --- | --- |
 | `vim` | .vimrc file and other files |
+| `coc` | coc extensions |
 | `rails` | .railsrc file |
 | `zsh` | .zshrc file |
 
