@@ -18,6 +18,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'dense-analysis/ale'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -56,9 +57,6 @@ let g:airline_powerline_fonts = 1
 nnoremap - :NERDTreeToggle<CR>
 map ] :NERDTreeFind<CR>
 
-" FZF
-set rtp+=~/.fzf
-nnoremap <C-f> :FZF<CR>
 
 " Colorscheme
 colorscheme onedark
@@ -102,9 +100,6 @@ let g:ale_fixers = {
 " CTags
 set tags=.git/tags,./tags;
 
-" Use ack instead of grep
-set grepprg=ack
-
 " Custom maps
 " --- Save current file
 nmap <C-g> :w<cr>
@@ -125,13 +120,10 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " --- Remove all Ruby comments of current file
 nmap <Leader>x :g/#/d<cr>
 
-" --- Spanish letters
-imap <unique> <C-n> ñ
-imap <unique> <C-a> á
-imap <unique> <C-e> é
-imap <unique> <C-k> í
-imap <unique> <C-o> ó
-imap <unique> <C-u> ú
-
 " --- Config for scss files
 autocmd FileType scss setl iskeyword+=@-@
+
+" FZF
+nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>g :Rg<CR>
+nnoremap <Leader>l :BLine<CR>
