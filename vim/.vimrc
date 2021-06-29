@@ -35,6 +35,7 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 Plugin 'uguu-org/vim-matrix-screensaver'
+Plugin 'dyng/ctrlsf.vim'
 
 " Vundle Ends
 call vundle#end()
@@ -127,3 +128,9 @@ autocmd FileType scss setl iskeyword+=@-@
 nnoremap <Leader>f :FZF<CR>
 nnoremap <Leader>g :Rg<CR>
 nnoremap <Leader>l :BLine<CR>
+
+" CtrlSF
+nmap <leader>a :CtrlSF -R ""<Left>
+nmap <leader>A <Plug>CtrlSFCwordPath -W<CR>
+nmap <leader>c :CtrlSFFocus<CR>
+nmap <leader>C :CtrlSFToggle<CR>
