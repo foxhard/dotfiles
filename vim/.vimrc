@@ -121,6 +121,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " --- Remove all Ruby comments of current file
 nmap <Leader>x :g/#/d<cr>
 
+" Substitute the word under the cursor.
+nmap <leader>s :%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>
+
 " --- Config for scss files
 autocmd FileType scss setl iskeyword+=@-@
 
