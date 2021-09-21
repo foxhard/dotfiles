@@ -105,7 +105,7 @@ set tags=.git/tags,./tags;
 " --- Save current file
 nmap <C-g> :w<cr>
 " --- Run rspec on current file
-nmap <Leader>r :!clear && rspec %<cr>
+nmap <Leader>r :!clear && rspec -f d %<cr>
 " --- Run jest on current file
 nmap <Leader>j :!clear && npx jest %<cr>
 " --- Toggle search highlights
