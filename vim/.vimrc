@@ -57,7 +57,7 @@ let g:airline_powerline_fonts = 1
 " NERDTree
 nnoremap - :NERDTreeToggle<CR>
 map ] :NERDTreeFind<CR>
-
+let g:NERDTreeWinPos = "right"
 
 " Colorscheme
 colorscheme onedark
@@ -137,3 +137,11 @@ nmap <leader>a :CtrlSF -R ""<Left>
 nmap <leader>A <Plug>CtrlSFCwordPath -W<CR>
 nmap <leader>c :CtrlSFFocus<CR>
 nmap <leader>C :CtrlSFToggle<CR>
+
+" Show invisibles
+set list
+set listchars=
+set listchars+=trail:░
+
+" Avoid text wrap
+set nowrap!
