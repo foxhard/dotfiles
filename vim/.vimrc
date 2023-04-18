@@ -86,10 +86,10 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 0
 " --- Don't run linters on opening a file
 let g:ale_lint_on_enter = 0
-" --- Don't run linters on saving file
+" --- Run linters on saving file
 let g:ale_lint_on_save = 1
 " --- Run fixers on saving file
-let g:ale_fix_on_save = 1
+let g:ale_fix_on_save = 0
 let g:ale_fixers = {
   \    'javascript': ['eslint'],
   \    'typescript': ['prettier', 'tslint'],
@@ -110,6 +110,8 @@ nmap <Leader>r :!clear && rspec -f d %<cr>
 nmap <Leader>j :!clear && npx jest %<cr>
 " --- Toggle search highlights
 nnoremap <c-h> :set hlsearch!<cr>
+" --- Show git history of current file
+nmap <Leader>h :!clear && git log --format="The author of \%h was \%an, \%ar\%nThe title was >>\%s<<\%n" --follow -- %<cr>
 " --- Use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
