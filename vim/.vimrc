@@ -36,6 +36,7 @@ Plugin 'ap/vim-css-color'
 Plugin 'stephenway/postcss.vim'
 Plugin 'uguu-org/vim-matrix-screensaver'
 Plugin 'dyng/ctrlsf.vim'
+Plugin 'github/copilot.vim'
 
 " Vundle Ends
 call vundle#end()
