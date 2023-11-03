@@ -102,6 +102,9 @@ let g:ale_fixers = {
 " CTags
 set tags=.git/tags,./tags;
 
+" Use new regular expression engine (To avoid memory overflow errors)
+set re=0
+
 " Custom maps
 " --- Save current file
 nmap <C-g> :w<cr>
